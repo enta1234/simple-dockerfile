@@ -6,6 +6,12 @@ name: Docker
 # documentation.
 
 on:
+  workflow_dispatch:
+    inputs:
+      env:
+        description: "Environment"
+        required: true
+        default: "dev"
   schedule:
     - cron: '44 12 * * *'
   push:
